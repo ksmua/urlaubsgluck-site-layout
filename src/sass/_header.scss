@@ -1,0 +1,111 @@
+.header {
+    display: flex;
+    height: 540px;
+    color: white;
+    font-family: 'Montserrat-Bold';
+    background-image: url("../img/header-bkg.jpg");
+    background-position: center center;
+    background-height: 100%;
+    background-size: cover;
+    position: relative;
+    //* on DESCTOP *
+    //height: 700px;
+    
+    section {
+        justify-content: center;
+    }
+    
+    h1 { 
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: bottom;
+        padding-top: 20px;
+        border: 1px solid yellow;
+        font-size: 30px;
+        line-height: 37px;
+        margin: 0;
+        //* for DESCTOP *
+        //font-size: 52px;
+        //line-height: 67px;
+    }
+    
+    h2 {
+        font-family: "Roboto-Light";
+        font-size: 18px;
+        line-height: 21px;
+        width: 220px;
+        margin: 0 auto;
+        margin-top: 12px;
+        text-align: center;
+        border: 1px solid green;
+        margin-bottom: 18px;
+    }
+    
+    .red-button {
+        display: block;
+        background-color: $tomato-color;
+        border: none;
+        width: 280px;
+        height: 40px;
+        border-radius: 20px;
+        color: white;
+        font-family: "Montserrat-Bold";
+        font-size: 14px;
+        margin: 0 auto;
+        &:hover {
+            border: 2px solid white;
+        }
+    }
+}
+
+.header-top {
+    margin-top: 20px;
+    border: 1px solid red;
+    //* on DESCTOP *
+    //display: flex;
+    //flex-direction: row-reverse;
+    //justify-content: space-between;
+    //align-items: center;
+}
+
+.header-buttons {
+    font-size: 14px;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo {
+	padding-top: 120px;
+    text-transform: uppercase;
+	font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    a {
+        border: 1px solid blue;
+    }
+}
+
+.in-button {
+    height: 36px;
+    width: 90px;
+    border: 2px solid transparent;
+    border-radius: 18px ;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    
+    &:hover {
+        background-color: $tomato-color;
+        border-color: white;
+    }
+}
+
+.sig-up {
+    border: 2px solid white;
+}
+
+//@media screen and (min-width: 320px){
+//}
