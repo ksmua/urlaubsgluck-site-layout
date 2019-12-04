@@ -45,7 +45,32 @@ main {
 	border: 1px solid red;
 	border-radius: 5px;
 	background-color: $primary-color;
-}
-.step-card-1{
-	background-image: url("../img/step-card-1-bkg.jpg");
+	
+	.step-card--1 {
+		 background-image: url("../img/step-card-1-bkg.jpg");
+	}
+	
+	.step-card--2 {
+		 background-image: url("../img/step-card-2-bkg.jpg");
+	}
+	
+	.step-card--3 {
+		 background-image: url("../img/step-card-3-bkg.jpg");
+	}
+	
+	.step-card__stiker {
+		margin-top: 69px;
+		margin-left: 21px;
+		width: 70px;
+		height: 20px;
+		border-radius: 10px;
+		background-color: $tomato-color;
+		text-transform: uppercase;
+		font-family: "Montserrat-Regular";
+		font-size: 10px;
+		color: white;
+		line-height: 22px;
+		text-align: center;
+		vertical-align: middle;
+	}
 }
