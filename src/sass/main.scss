@@ -17,33 +17,41 @@ a {
 	color: inherit;
 }
 
+body {
+	background-color: white;
+}
+
 .container {
-	max-width: 940px;
+	width: 320px;
+	// max-width: 940px;
 	margin: 0 auto;
 }
 
-body {
-	background-color: grey;
-}
-
-
-//*** MAIN SECTION ***
+//*************************************************************************************** 
+//******************************** MAIN SECTION *****************************************
+//*************************************************************************************** 
 main {
 	h3 {
 		font-family: "Montserrat-Bold";
 		font-size: 21px;
 		line-height: 21px;
-		color: white;
+		color: $grey-dark;
 		text-align: center;
 		border: 1px solid blue;
-		margin-bottom: 10px;
+		// margin-bottom: 10px;
+		padding: 0 10px 5px;
 	}
+}
+
+.step-card-section{
+	padding: 40px 10px 0; 
+	border: 1px dashed grey;
 }
 
 .step-card {
 	width: 300px;
 	height: 240px;
-	margin: 5px auto;
+	margin: 10px auto;
 	border: 1px solid red;
 	border-radius: 5px;
 	padding: 20px;
@@ -91,3 +99,54 @@ main {
 	color: $grey-light;
 	border: 1px solid yellow;
 }
+
+
+.partner-card-section {
+	padding-top: 35px;
+	border: 1px dashed green;
+}
+
+.partner-card {
+	padding: 25px 0;
+	position: relative;
+	text-align: center;
+
+	.partner-card__img {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		width: 122px;
+		height: 122px;
+	
+		img {
+			border-radius: 50%;
+		}
+	}
+	
+	.partner-card__stiker{
+			position: absolute;
+			right: -5px;
+			bottom: -5px;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+	}	
+	
+	.partner-card__name{
+		font-family: "Montserrat-Bold";
+		font-size: 14px;
+		line-height: 14px;
+		text-align: center;
+		margin-top: 22px;
+	}
+
+	.partner-card__about{
+		display: block;
+		width: 220px;
+		margin: 17px auto 0;
+		font-family: "Roboto-Light";
+		font-size: 14px;
+		color: $grey-normal;
+	}
+
+} //partner-card end 
