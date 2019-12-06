@@ -163,3 +163,91 @@ main {
 	}
 
 } //partner-card end 
+
+
+.ideas-section {
+	border: 1 px solid violet;
+	padding: 38px 0 40px;
+	
+	.ideas-cards{
+		margin-bottom: 40px;
+	}
+
+	.ideas-card {
+		height: 120px;
+		width: 300px;
+		margin: 10px auto;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h4 {
+				font-family: "Montserrat-Bold";
+				font-size: 22px;
+				color: white;
+				text-align: center;
+		}
+	}
+
+	.sport-and-activity,
+	.willnes-and-health,
+	.extreme-sports-and-expeditions,
+	.games,
+	.culture-and-education,
+	.relaxation,
+	.traveling {
+		border-radius: 5px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.sport-and-activity {
+		background-image: url("../img/ideas/sport_and_activity.jpg");
+	}
+	.willnes-and-health {
+		background-image: url("../img/ideas/wellnes_and_health.jpg");
+	}
+	.extreme-sports-and-expeditions {
+		background-image: url("../img/ideas/extreme_sports_and_expeditions.jpg");
+	}
+	.games {
+		background-image: url("../img/ideas/games.jpg");
+	}
+	.culture-and-education {
+		background-image: url("../img/ideas/culture_and_education.jpg");
+	}
+	.relaxation {
+		background-image: url("../img/ideas/relaxation.jpg");
+	}
+	.traveling {
+		background-image: url("../img/ideas/traveling.jpg");
+	}
+
+	// ***************** Serch FORM ***********************
+	.search-partners {
+		padding: 8px 0;
+		
+		p {
+			text-align: center;
+			font-family: "Roboto-Light";
+			font-size: 18px;
+			line-height: 18px;
+			color: $grey-dark;
+			padding: 20px 0 16px;
+		}
+		input[type=text] {
+			height: 40px;
+			width: 280px;
+			color: $grey-ground;
+			border: 1px solid $grey-ground;
+			border-radius: 5px;
+			font-family: "Roboto-Light";
+			font-size: 14px;
+			display: block;
+			margin: 0 auto 10px;
+			padding: 0 5px 0 16px;
+		}
+	}
+}

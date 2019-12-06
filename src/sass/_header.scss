@@ -41,20 +41,21 @@
         margin-bottom: 18px;
     }
     
-    .red-button {
-        display: block;
-        background-color: $tomato-color;
-        border: none;
-        width: 280px;
-        height: 40px;
-        border-radius: 20px;
-        color: white;
-        font-family: "Montserrat-Bold";
-        font-size: 14px;
-        margin: 0 auto;
-        &:hover {
-            border: 2px solid white;
-        }
+    
+}
+.red-button {
+    display: block;
+    background-color: $tomato-color;
+    border: none;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    font-family: "Montserrat-Bold";
+    font-size: 14px;
+    margin: 0 auto;
+    &:hover {
+        border: 2px solid white;
     }
 }
 
