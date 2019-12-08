@@ -1,0 +1,32 @@
+
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
+}
+
+body {
+	background-color: white;
+}
+
+.container {
+	width: 320px;
+	// max-width: 940px;
+	margin: 0 auto;
+}
+
+
+@import "fonts";
+@import "color";
+@import "normalize";
+@import "header";
+@import "main";
+@import "footer";

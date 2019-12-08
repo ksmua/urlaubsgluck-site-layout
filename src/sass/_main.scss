@@ -1,32 +1,3 @@
-@import "fonts";
-@import "color";
-@import "normalize";
-@import "header";
-@import "footer";
-
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
-	color: inherit;
-}
-
-body {
-	background-color: white;
-}
-
-.container {
-	width: 320px;
-	// max-width: 940px;
-	margin: 0 auto;
-}
-
 //*************************************************************************************** 
 //******************************** MAIN SECTION *****************************************
 //*************************************************************************************** 
@@ -166,7 +137,7 @@ main {
 
 
 .ideas-section {
-	border: 1 px solid violet;
+	border: 1px solid violet;
 	padding: 38px 0 40px;
 	
 	.ideas-cards{
@@ -250,4 +221,12 @@ main {
 			padding: 0 5px 0 16px;
 		}
 	}
+}
+
+//*************** max size of screen - 768px *****************
+//*************** 320px - 768px              *****************
+@media screen and (min-width: 768px) {
+  body {
+    background-color: blue;
+  }
 }

@@ -1,13 +1,14 @@
 .header {
     display: flex;
     height: 540px;
+    width: 320px;
     color: white;
     font-family: 'Montserrat-Bold';
-    background-image: url("../img/header-bkg.jpg");
+    background-image: url("../img/header-bkg-0-320.jpg");
     background-position: center center;
     background-size: cover;
-    position: relative;
-    // margin-bottom: 38px;
+    // position: relative;
+    margin: 0 auto;
     //* on DESCTOP *
     //height: 700px;
     
