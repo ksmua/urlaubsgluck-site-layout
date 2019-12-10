@@ -26,10 +26,15 @@ main {
 	border: 1px solid red;
 	border-radius: 5px;
 	padding: 20px;
+	display: flex;
+	// flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	// align-items: center;
 	// background-color: $primary-color;
 
 	.step-card__stiker {
-		margin-top: 50px;
+		// margin-top: 50px;
 		width: 70px;
 		height: 20px;
 		border-radius: 10px;
@@ -40,7 +45,7 @@ main {
 		color: white;
 		line-height: 22px;
 		text-align: center;
-		vertical-align: middle;
+		// vertical-align: middle;
 	}
 }
 
@@ -55,6 +60,9 @@ main {
 }
 
 .step-card__header {
+	display: block;
+	max-height: 25%;
+	width: 100%;
 	margin-top: 18px;
 	color: white;
 	font-family: "Montserrat-Bold";
@@ -65,10 +73,12 @@ main {
 
 .step-card__description {
 	margin-top: 12px;
+	max-height: 50%;
 	font-size: 14px;
 	font-family: "Roboto-Light";
 	color: $grey-light;
 	border: 1px solid yellow;
+	overflow: hidden;
 }
 
 
@@ -223,9 +233,30 @@ main {
 	}
 }
 
-//*************** max size of screen - 768px *****************
-//*************** 320px - 768px              *****************
+//*************** max size of screen - 320px *****************
+//***************         min > 320px        *****************
+@media screen and (max-width: 320px) {
+  body {
+    background-color: blue;
+  }
+}
+
+//************************************************************
+//***************      320px > 767px        ******************
+//***************      mobile styles       *******************
+
+
+//*************** min size of screen - 768px *****************
+//***************      768px > 1439px        *****************
 @media screen and (min-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
+
+//*************** min size of screen - 1440px ****************
+//***************        1440px > max         ****************
+@media screen and (min-width: 1440px) {
   body {
     background-color: blue;
   }
