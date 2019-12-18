@@ -9,8 +9,7 @@ main {
 		color: $grey-dark;
 		text-align: center;
 		border: 1px solid blue;
-		// margin-bottom: 10px;
-		padding: 0 10px 5px;
+		padding: 0 10px;
 	}
 }
 
@@ -19,10 +18,14 @@ main {
 	border: 1px dashed grey;
 }
 
+.step-cards{
+	padding-top: 36px;
+}
 .step-card {
+	position: relative;
 	width: 300px;
 	height: 240px;
-	margin: 10px auto;
+	margin: 0 auto;
 	border: 1px solid red;
 	border-radius: 5px;
 	padding: 20px;
@@ -31,7 +34,8 @@ main {
 	flex-wrap: wrap;
 	align-content: flex-end;
 	// align-items: center;
-	// background-color: $primary-color;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 
 	.step-card__stiker {
 		// margin-top: 50px;
@@ -39,14 +43,26 @@ main {
 		height: 20px;
 		border-radius: 10px;
 		background-color: $tomato-color;
-		text-transform: uppercase;
 		font-family: "Montserrat-Regular";
 		font-size: 10px;
 		color: white;
 		line-height: 22px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
 		text-align: center;
+		z-index: 1;
 		// vertical-align: middle;
 	}
+}
+.step-card::before {
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+		content: "";
+		position: absolute;
+		display: block;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
 }
 
 .step-card--1 {
@@ -69,6 +85,7 @@ main {
 	font-size: 20px;
 	line-height: 24px;
 	border: 1px solid red;
+	z-index: 1;
 }
 
 .step-card__description {
@@ -79,11 +96,12 @@ main {
 	color: $grey-light;
 	border: 1px solid yellow;
 	overflow: hidden;
+	z-index: 1;
 }
 
 
 .partner-card-section {
-	padding: 35px 0 38px 0;
+	padding: 45px 0 38px 0;
 	border: 1px dashed green;
 
 	.button-transparent{
@@ -244,20 +262,69 @@ main {
 //************************************************************
 //***************      320px > 767px        ******************
 //***************      mobile styles       *******************
-
+@media screen and (min-width: 320px) {
+  body {
+    background-color: tomato;
+  }
+}
 
 //*************** min size of screen - 768px *****************
 //***************      768px > 1439px        *****************
 @media screen and (min-width: 768px) {
   body {
-    background-color: blue;
-  }
+    background-color: green;
+	}
+
+	.step-card-section {
+		padding-top: 100px;
+		}
+	.step-cards {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.step-card{
+		width: 235px;
+		height: 400px;
+	}
+	
+	.step-card--1 {
+		background-image: url("../img/step-card-1-bkg-tablet.jpg");
+		background-position-x: -225px;
+		background-position-y: -25px;
+	}
+	.step-card--2 {
+		background-image: url("../img/step-card-2-bkg-tablet.jpg");
+		background-position-x: -186px;
+		background-position-y: -21px;
+	}
+	.step-card--3 {
+		background-image: url("../img/step-card-3-bkg-tablet.jpg");
+		background-position-x: -205px;
+		background-position-y: -22px;
+	}
+
 }
 
 //*************** min size of screen - 1440px ****************
 //***************        1440px > max         ****************
 @media screen and (min-width: 1440px) {
   body {
-    background-color: blue;
-  }
+    background-color: red;
+	}
+	.step-card {
+		width: 300px;
+	}
+	.step-card--1 {
+		background-position-x: -192px;
+		background-position-y: -18px;
+	}
+	.step-card--2 {
+		background-position-x: -160px;
+		background-position-y: -22px;
+	}
+	.step-card--3 {
+		background-position-x: -196px;
+		background-position-y: -30px;
+	}
 }
