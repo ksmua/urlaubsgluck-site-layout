@@ -1,9 +1,18 @@
-let gulp = require('gulp'),
-//  concat = require('gulp-concat'),
-		sass = require('gulp-sass'),
-		autoprefixer = require('gulp-autoprefixer'),
-		browserSync = require('browser-sync');
+let gulp 					= require('gulp'),
+//  concat 				= require('gulp-concat'),
+		gulpSass 			= require('gulp-sass'),
+		autoprefixer 	= require('gulp-autoprefixer'),
+		browserSync 	= require('browser-sync');
+		brify 				= require("browserify"),
+		source 				= require("vinyl-source-stream");
 
+gulp.task('js', function(){
+	return brify('./src/js/main.js')
+					.bundle()
+					.pipe(source('bundle.js'))
+					.pipe(gulp.dest('./src/js/'))
+					.pipe(browserSync.reload({ stream: true }));
+});
 
 // function js() {
 //   return src('client/javascript/*.js', { sourcemaps: true })
@@ -20,10 +29,10 @@ gulp.task('br-sync', function(){
 });
 
 
-gulp.task('runSass', function (){
-	// console.log('It run.');
+gulp.task('sass', function (){
+	// console.log('sass run.');
 	return gulp.src('./src/sass/*.+(sass|scss)')
-		.pipe(sass(
+		.pipe(gulpSass(
 			{
 				errorLogToConsole: true,
 				outputStyle: 'compresed'
@@ -44,15 +53,13 @@ gulp.task('runSass', function (){
 			.pipe(browserSync.reload({ stream: true }));
 	});
 	gulp.task('watch', function(){
-		gulp.watch('./src/sass/*.+(sass|scss)', gulp.parallel('runSass'));
-		gulp.watch('./src/*.html', gulp.parallel('html'))
+		gulp.watch('./src/sass/*.+(sass|scss)', gulp.parallel('sass'));
+		gulp.watch('./src/*.html', gulp.parallel('html'));
+		gulp.watch('./js', gulp.parallel('js'));
 	});
 	
 gulp.task("default", gulp.parallel('watch', 'br-sync'));
 	//exports.default = defaultTask;
-
-
-
 
 
 // function runSass(go) {
