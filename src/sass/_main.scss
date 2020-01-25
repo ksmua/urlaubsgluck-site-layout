@@ -287,6 +287,23 @@ main {
 	}
 }
 
+//*************** min size of screen - 600px *****************
+//***************      600px > 1439px        *****************
+@media screen and (min-width: 600px) {
+	.partner-cards{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 480px;
+		margin: 0 auto;
+	}
+	.partner-card{
+		max-width:200px;
+		margin: 0 20px;
+	}
+	
+}
 //*************** min size of screen - 768px *****************
 //***************      768px > 1439px        *****************
 @media screen and (min-width: 768px) {
@@ -331,8 +348,10 @@ main {
 		height: 310px;
 	}
 	.ideas-card-width-2x {
-		width: 62%;
+		width: 64%;
 	}
+
+	
 }
 
 //*************** min size of screen - 1440px ****************
@@ -355,5 +374,13 @@ main {
 	.step-card--3 {
 		background-position-x: -196px;
 		background-position-y: -30px;
+	}
+
+
+	.partner-cards{
+		max-width: 940px;
+	}
+	.partner-card{
+		width:20%;
 	}
 }
