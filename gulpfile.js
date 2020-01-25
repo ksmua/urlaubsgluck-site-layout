@@ -55,7 +55,7 @@ gulp.task('sass', function (){
 	gulp.task('watch', function(){
 		gulp.watch('./src/sass/*.+(sass|scss)', gulp.parallel('sass'));
 		gulp.watch('./src/*.html', gulp.parallel('html'));
-		gulp.watch('./js', gulp.parallel('js'));
+		gulp.watch('./src/js/main.js', gulp.parallel('js'));
 	});
 	
 gulp.task("default", gulp.parallel('watch', 'br-sync'));

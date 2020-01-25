@@ -168,28 +168,46 @@ main {
 	border: 1px solid violet;
 	padding: 38px 0 40px;
 	
-	.ideas-cards{
-		margin-bottom: 40px;
+	.ideas-cards {
+		width: 96%;	
+		max-width: 940px;
+		margin: 0 auto 40px;
+		// display: flex;
+		// justify-content: center;
 	}
 
-	.ideas-card {
-		height: 120px;
-		width: 300px;
-		margin: 10px auto;
-		position: relative;
-		overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		h4 {
-				font-family: "Montserrat-Bold";
-				font-size: 22px;
-				color: white;
-				text-align: center;
-		}
+	h4 {
+			font-family: "Montserrat-Bold";
+			font-size: 22px;
+			color: white;
+			text-align: center;
+			// max-width: 100%;
+			// display: block;
 	}
+}
 
+.ideas-card {
+	height: 200px;
+	margin: 10px auto;
+	width: 100%;
+		// width: 300px;
+		// position: relative;
+		// overflow: hidden;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+	// .ideas-card-width {
+	// 	width: 100%;
+	// 
+}
+	
+.grid-sizer {
+	width: 96%;
+}
+
+.ideas-card-width-2x {
+	width: 100%;
+}
 	.sport-and-activity,
 	.willnes-and-health,
 	.extreme-sports-and-expeditions,
@@ -199,7 +217,8 @@ main {
 	.traveling {
 		border-radius: 5px;
 		background-repeat: no-repeat;
-		background-position: center;
+		// background-position: center;
+		background-size: cover;
 	}
 
 	.sport-and-activity {
@@ -249,7 +268,7 @@ main {
 			padding: 0 5px 0 16px;
 		}
 	}
-}
+
 
 //*************** max size of screen - 320px *****************
 //***************         min > 320px        *****************
@@ -265,7 +284,7 @@ main {
 @media screen and (min-width: 320px) {
   body {
     background-color: tomato;
-  }
+	}
 }
 
 //*************** min size of screen - 768px *****************
@@ -304,6 +323,16 @@ main {
 		background-position-y: -22px;
 	}
 
+	.grid-sizer {
+		width: 31%;
+	}
+	.ideas-card {
+		width: 31%;
+		height: 310px;
+	}
+	.ideas-card-width-2x {
+		width: 62%;
+	}
 }
 
 //*************** min size of screen - 1440px ****************
