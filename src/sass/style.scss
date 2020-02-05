@@ -16,6 +16,17 @@ a {
 body {
 	background-color: white;
 }
+button {
+	overflow: hidden;
+	background: none; // убираем фон
+	border: none; // убирает бордер
+	box-shadow: none; // убираем тень, если есть
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
 
 .container {
 	width: 320px;
