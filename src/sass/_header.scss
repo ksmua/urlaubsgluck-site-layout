@@ -76,7 +76,91 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative;
 }
+
+.button-transparent {
+    display: block;
+    margin: 5px auto 0;
+    height: 40px;
+    width: 280px;
+    border: 2px solid $tomato-color;
+    border-radius: 20px;
+    background-color: transparent;
+    font-family: "Montserrat-Bold";
+    font-size: 14px;
+    color: $tomato-color;
+    &:hover {
+        background-color: #ff4e50;
+        border-color: #ff4e50;;
+        color: white;
+    }
+}
+
+.input-field {
+    height: 40px;
+	width: 280px;
+	color: $grey-ground;
+	border: 1px solid $grey-ground;
+	border-radius: 5px;
+	font-family: "Roboto-Light";
+    font-size: 14px;
+    text-indent: 10px;
+	display: block;
+	background-color: inherit;
+    outline: none;
+}
+
+#login-form {
+    position: absolute;
+    right: 0;
+    width: 320px;
+    height: 240px;
+    background-color: white;
+    padding-top: 20px;
+    border-radius: 10px;
+    color: #333333;
+
+    input {
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        // background-color: rgb(240, 190, 190);
+    }
+    
+    label {
+        padding-left: 25px;
+        margin-bottom: 5px;
+    }
+    
+    #login-submit {
+        margin-top:25px;
+    }
+    
+    #login-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 20px;
+        // border: 1px solid #ff4e50;
+        border-radius: 10px;
+        background-color: #e2e2e2;
+        font-family: "Montserrat-Regular";
+        font-size: 10px;
+        // color: #ff4e50;
+        color: #333333;
+        line-height: 22px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover{
+            background-color: #ff4e50;
+            color: white;
+        }
+    }
+}
+
 
 .logo {
 	padding-top: 120px;

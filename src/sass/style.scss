@@ -22,6 +22,9 @@ button {
 	border: none; // убирает бордер
 	box-shadow: none; // убираем тень, если есть
 }
+button:hover {
+	cursor: pointer;
+}
 button, 
 button:active, 
 button:focus {
@@ -32,6 +35,10 @@ button:focus {
 	width: 320px;
 	// max-width: 940px;
 	margin: 0 auto;
+}
+
+.unvisible {
+	display: none;
 }
 
 //*************** max size of screen - 320px *****************

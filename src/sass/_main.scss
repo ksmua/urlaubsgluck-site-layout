@@ -104,23 +104,7 @@ main {
 	padding: 45px 0 38px 0;
 	border: 1px dashed green;
 
-	.button-transparent{
-		display: block;
-		margin: 5px auto 0;
-		height: 40px;
-		width: 280px;
-		border: 2px solid $tomato-color;
-		border-radius: 20px;
-		background-color: transparent;
-		font-family: "Montserrat-Bold";
-		font-size: 14px;
-		color: $tomato-color;
-		&:hover{
-			background-color: #ff4e50;
-			border-color: white;
-			color: white;
-		}
-	}
+
 }
 
 .partner-card {
@@ -273,19 +257,9 @@ main {
 			color: $grey-dark;
 			padding: 20px 0 16px;
 		}
-		input[type=text] {
-			height: 40px;
-			width: 280px;
-			color: $grey-ground;
-			border: 1px solid $grey-ground;
-			border-radius: 5px;
-			font-family: "Roboto-Light";
-			font-size: 14px;
-			display: block;
+		.input-field {
 			margin: 0 auto 10px;
 			padding: 0 5px 0 16px;
-			background-color: inherit;
-			outline: none;
 		}
 	}
 

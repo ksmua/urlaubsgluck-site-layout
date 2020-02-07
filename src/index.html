@@ -14,7 +14,15 @@
     <section class="container">
       <div class="header-top">
         <div class="header-buttons">
-          <button class="in-button">Log in</button>
+          <form action="#" id="login-form" class="unvisible">
+            <button id="login-close">close</button>
+            <label for="login-name">Name</label>
+            <input id="login-name" class="input-field" type="text">
+            <label for="login-password">Password</label>
+            <input id="login-password" class="input-field" type="password">
+            <button id="login-submit"class="button-transparent">Submit</button>
+          </form>
+          <button id="login-button" class="in-button">Log in</button>
           <button class="in-button sig-up">Sig up</button>
         </div>
         <div class="logo">
@@ -120,7 +128,7 @@
       <form action="#" class="search-partners">
         <h3 class="container">Discover holiday activity ideas</h3>
         <p>Hi! What are your holiday interests?</p>
-        <input id="input-search-partners" type="text" placeholder="Enter your interests">
+        <input id="input-search-partners" class="input-field" "type="text" placeholder="Enter your interests">
         <button id="btn-search-partners" class="red-button">Search partners</button>
       </form>
     </section>
@@ -139,11 +147,10 @@
     <h5>Partners</h5>
     <div class="designer">
       <span>designed by</span>
-      <img src="/img/designer-logo.png" alt="designer-logo">
+      <a href="#"><img src="/img/designer-logo.png" alt="designer-logo"></a>
     </div>
   </footer>
   <script src="./js/bundle.js"></script>
 </body>
 
 </html>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatem ducimus impedit dolores placeat soluta, rerum expedita eligendi corrupti voluptates saepe facere, cupiditate, voluptatum unde natus nobis doloremque officiis. Pariatur.

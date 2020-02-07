@@ -2,7 +2,12 @@
 var imagesLoaded = require('imagesloaded');
 var Masonry = require('masonry-layout');
 
-var container = document.querySelector('.ideas-cards');
+var container = (document.getElementsByClassName('ideas-cards'))[0];
+console.log("container = ", container);
+
+var logInBtn = document.getElementById('login-button');
+var loginForm = document.getElementById('login-form');
+var logInCloseBtn = document.getElementById('login-close');
 var serchPartnersBtn = document.getElementById('btn-search-partners');
 var otherPartnersBtn = document.getElementById('see-other-partners');
 
@@ -78,10 +83,14 @@ function add2xWidth(container) {
   // width = true;
   if (width >= 719) {
 // 
-// 
 // https://developer.mozilla.org/ru/docs/Web/API/Window/resize_event
-// 
-// 
+    // «document.body.clientWidth» — ширина сайта, родительского элемента body.
+    // «innerWidth» — внутренняя рабочая часть браузера с отображаемым сайтом.
+    // «outerWidth» — размер с учётом полос прокрутки и рамок браузера.
+    // «screen.width» — разрешение экрана по горизонтали.
+    // «screen.availWidth» — доступная область эркана для окон.Не учитвает служебные 
+    // панели операционной системы, например, панель задач в windows.
+
     var elemArr = document.getElementsByClassName("ideas-card");
     elemArr[4].classList += " ideas-card-width-2x";
     elemArr[5].classList += " ideas-card-width-2x";
@@ -105,11 +114,11 @@ function reRender(container, masonry) {
 }
 //=======================================================================================
 
-function containerClear(masonry){
-  var elArr = Array.prototype.slice.call(container.getElementsByTagName('ideas-card'));
-  // container.getElementsByClassName('ideas-cards').style = '';
-  masonry.remove(elArr);
-}
+// function containerClear(masonry){
+//   var elArr = Array.prototype.slice.call(container.getElementsByTagName('ideas-card'));
+//   // container.getElementsByClassName('ideas-cards').style = '';
+//   masonry.remove(elArr);
+// }
 //=======================================================================================
 
 function firstCharUp(str){
@@ -145,23 +154,6 @@ function sendRequest(method, URL, type, callbackFunc){
     callbackFunc(JSON.parse(xhr.responseText));
   }
 }
-//=======================================================================================
-
-serchPartnersBtn.addEventListener('click', function(){
-  event.preventDefault();
-  var searchInput = document.getElementById('input-search-partners');
-  var serchInputText = searchInput.value;
-  
-  if (serchInputText !== ''){
-    serchInputText = encodeURIComponent(serchInputText);
-    var pixabayURL = pixabay.URL + pixabay.API_KEY + "&q=" + serchInputText + "&image_type=photo";
-    searchInput.value = ''; //clear input field
-
-    sendRequest('GET', pixabayURL, false, addActivityCard);
-  }
-
-}); //end serchBtn.addEventListener
-//=======================================================================================
 
 //=======================================================================================
 function addPartnersCards(resp){
@@ -193,6 +185,30 @@ function sendPartnersRequest(){
 }
 //=======================================================================================
 
+logInBtn.addEventListener('click', function(){
+  loginForm.classList = '';
+});
+//=======================================================================================
+logInCloseBtn.addEventListener('click', function () {
+  loginForm.classList += 'unvisible';
+});
+//=======================================================================================
+
+serchPartnersBtn.addEventListener('click', function () {
+  event.preventDefault();
+  var searchInput = document.getElementById('input-search-partners');
+  var serchInputText = searchInput.value;
+
+  if (serchInputText !== '') {
+    serchInputText = encodeURIComponent(serchInputText);
+    var pixabayURL = pixabay.URL + pixabay.API_KEY + "&q=" + serchInputText + "&image_type=photo";
+    searchInput.value = ''; //clear input field
+
+    sendRequest('GET', pixabayURL, false, addActivityCard);
+  }
+
+}); //end serchBtn.addEventListener
+//=======================================================================================
 
 otherPartnersBtn.addEventListener('click', sendPartnersRequest);
 //=======================================================================================
