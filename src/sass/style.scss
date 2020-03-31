@@ -12,6 +12,10 @@ a {
 	display: inline-block;
 	color: inherit;
 }
+h1, h2, h4 {
+	text-shadow: 0 0 2px black;
+	letter-spacing: 2px;
+}
 
 body {
 	background-color: white;
@@ -40,6 +44,14 @@ button:focus {
 .unvisible {
 	display: none;
 }
+
+// ======SLIDER TEST======================
+.swiper-container {
+	width: 600px;
+	height: 300px;
+}
+// ======SLIDER TEST======================
+
 
 //*************** max size of screen - 320px *****************
 //***************         min > 320px        *****************

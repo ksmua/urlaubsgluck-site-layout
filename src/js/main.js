@@ -1,4 +1,7 @@
 // browserify needed!
+var Swiper = require('swiper');
+console.log(Swiper);
+
 var imagesLoaded = require('imagesloaded');
 var Masonry = require('masonry-layout');
 
@@ -19,6 +22,33 @@ var reqres = {
   URL: 'https://reqres.in/api/users?page=',
   pageCount: 1
 }
+
+
+//=======================================================================================
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
+console.log("mySwiper", mySwiper);
+
+//=======================================================================================
 
 var masonry = masonryInit(container); console.log("masonry ===>", masonry);
 

@@ -16,6 +16,7 @@
     "gulp-sass": "^4.0.2",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
+    "swiper": "^2.7.6",
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {}
