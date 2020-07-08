@@ -21,7 +21,7 @@
         text-align: center;
         vertical-align: bottom;
         padding-top: 20px;
-        border: 1px solid yellow;
+        // border: 1px solid yellow;
         font-size: 30px;
         line-height: 37px;
         margin: 0;
@@ -38,7 +38,7 @@
         margin: 0 auto;
         padding-top: 12px;
         text-align: center;
-        border: 1px solid green;
+        // border: 1px solid green;
         padding-bottom: 18px;
     }
     
@@ -62,7 +62,7 @@
 
 .header-top {
     margin-top: 20px;
-    border: 1px solid red;
+    // border: 1px solid red;
     //* on DESCTOP *
     //display: flex;
     //flex-direction: row-reverse;
@@ -72,7 +72,7 @@
 
 .header-buttons {
     font-size: 14px;
-    border: 1px solid yellow;
+    // border: 1px solid yellow;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -168,9 +168,9 @@
 	font-size: 20px;
     line-height: 20px;
     text-align: center;
-    a {
-        border: 1px solid blue;
-    }
+    // a {
+    //     border: 1px solid blue;
+    // }
 }
 
 .in-button {
@@ -251,9 +251,9 @@
 //***************       desctop styles        ****************
 @media screen and (min-width: 1440px) {
 //* on DESCTOP *
-  body {
-    background-color: red;
-  }
+//   body {
+//     background-color: red;
+//   }
   .header-top{
       width: 940px;
   }

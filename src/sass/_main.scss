@@ -8,14 +8,14 @@ main {
 		line-height: 21px;
 		color: $grey-dark;
 		text-align: center;
-		border: 1px solid blue;
+		// border: 1px solid blue;
 		padding: 0 10px;
 	}
 }
 
 .step-card-section{
 	padding: 40px 10px 0; 
-	border: 1px dashed grey;
+	// border: 1px dashed grey;
 }
 
 .step-cards{
@@ -26,7 +26,7 @@ main {
 	width: 300px;
 	height: 240px;
 	margin: 0 auto;
-	border: 1px solid red;
+	// border: 1px solid red;
 	border-radius: 5px;
 	padding: 20px;
 	display: flex;
@@ -84,7 +84,7 @@ main {
 	font-family: "Montserrat-Bold";
 	font-size: 20px;
 	line-height: 24px;
-	border: 1px solid red;
+	// border: 1px solid red;
 	z-index: 1;
 }
 
@@ -94,7 +94,7 @@ main {
 	font-size: 14px;
 	font-family: "Roboto-Light";
 	color: $grey-light;
-	border: 1px solid yellow;
+	// border: 1px solid yellow;
 	overflow: hidden;
 	z-index: 1;
 }
@@ -102,7 +102,7 @@ main {
 
 .partner-card-section {
 	padding: 45px 0 38px 0;
-	border: 1px dashed green;
+	// border: 1px dashed green;
 
 
 }
@@ -154,7 +154,7 @@ main {
 
 
 .ideas-section {
-	border: 1px solid violet;
+	// border: 1px solid violet;
 	padding: 38px 0 40px;
 
 	h4 {
@@ -194,8 +194,8 @@ main {
 	width: 170%;
 	height: 100%;
 	// border-radius: 5px;
-	    position: absolute;
-		left: -50%;
+	position: absolute;
+	left: -50%;
 }
 
 .ideas-card-width-2x img{
@@ -281,20 +281,20 @@ main {
 
 //*************** max size of screen - 320px *****************
 //***************         min > 320px        *****************
-@media screen and (max-width: 320px) {
-  body {
-    background-color: blue;
-  }
-}
+// @media screen and (max-width: 320px) {
+//   body {
+//     background-color: blue;
+//   }
+// }
 
 //************************************************************
 //***************      320px > 767px        ******************
 //***************      mobile styles       *******************
-@media screen and (min-width: 320px) {
-  body {
-    background-color: tomato;
-	}
-}
+// @media screen and (min-width: 320px) {
+//   body {
+//     background-color: tomato;
+// 	}
+// }
 
 //*************** min size of screen - 600px *****************
 //***************      600px > 1439px        *****************
@@ -316,9 +316,9 @@ main {
 //*************** min size of screen - 768px *****************
 //***************      768px > 1439px        *****************
 @media screen and (min-width: 768px) {
-  body {
-    background-color: green;
-	}
+  // body {
+  //   background-color: green;
+	// }
 
 	.step-card-section {
 		padding-top: 100px;
@@ -369,9 +369,9 @@ main {
 //*************** min size of screen - 1440px ****************
 //***************        1440px > max         ****************
 @media screen and (min-width: 1440px) {
-  body {
-    background-color: red;
-	}
+  // body {
+  //   background-color: red;
+	// }
 	.step-card {
 		width: 300px;
 	}

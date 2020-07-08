@@ -79,9 +79,9 @@ button:focus {
 //*************** min size of screen - 1440px ****************
 //***************        1440px > max         ****************
 @media screen and (min-width: 1440px) {
-  body {
-    background-color: red;
-	}
+  // body {
+  //   background-color: red;
+	// }
 	.container {
 		width: 100%;
 		max-width: 940px;
