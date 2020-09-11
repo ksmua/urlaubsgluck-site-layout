@@ -3,7 +3,7 @@ var imagesLoaded = require('imagesloaded');
 var Masonry = require('masonry-layout');
 
 var container = (document.getElementsByClassName('ideas-cards'))[0];
-console.log("container = ", container);
+// console.log("container = ", container);
 
 var logInBtn = document.getElementById('login-button');
 var loginForm = document.getElementById('login-form');
@@ -20,7 +20,8 @@ var reqres = {
   pageCount: 1
 }
 
-var masonry = masonryInit(container); console.log("masonry ===>", masonry);
+var masonry = masonryInit(container); 
+// console.log("masonry ===>", masonry);
 
 //=======================================================================================
 
@@ -79,10 +80,8 @@ function createPartnerCard(partnerPhoto, partnerFullName, partnerAbout){
 //=======================================================================================
 function add2xWidth(container) {
   var width = container.offsetWidth;
-  // console.log("width of container = ", width, "type = ", typeof(width));
-  // width = true;
   if (width >= 719) {
-// 
+
 // https://developer.mozilla.org/ru/docs/Web/API/Window/resize_event
     // «document.body.clientWidth» — ширина сайта, родительского элемента body.
     // «innerWidth» — внутренняя рабочая часть браузера с отображаемым сайтом.
@@ -98,7 +97,6 @@ function add2xWidth(container) {
       elemArr[j].classList += " ideas-card-width-2x";
       if (elemArr[j + 1]) { elemArr[j + 1].classList += " ideas-card-width-2x"; }
       j += 1;
-      // console.log("j = ", j);
     }
     // return elemArr;
   }
@@ -108,9 +106,7 @@ function add2xWidth(container) {
 function reRender(container, masonry) {
       // console.log('rerender');
   add2xWidth(container);
-      // console.log('render masonry ==>>>>> masonryInit()', masonry);
   masonryInit(container);
-  // masonry.layout(var elarr = Array.prototype.slice.call(arr););
 }
 //=======================================================================================
 
@@ -132,7 +128,7 @@ function addActivityCard(resp){
   for (var i = 0; i < resp.hits.length; i++) {
     createActivityCard(container, resp.hits[i].webformatURL, firstCharUp(resp.hits[i].tags));
   }
-  // console.log("elems", elems);
+  
   imagesLoaded(container, reRender(container, masonry)); 
 }
 //=======================================================================================
@@ -160,6 +156,7 @@ function addPartnersCards(resp){
   var container = document.getElementById('partner-cards');
   var partners = resp.data;
   var partnersArr = [];
+ 
   for (var i = 0; i < partners.length; i++) {
     var partnerPhoto = partners[i].avatar;
     var partnerFullName = partners[i].first_name + ' ' + partners[i].last_name;
@@ -167,10 +164,13 @@ function addPartnersCards(resp){
     
     partnersArr.push(createPartnerCard(partnerPhoto, partnerFullName, partnerAbout));
   }
+  
   for (var i = 0; i < partnersArr.length; i++) {
       container.insertAdjacentHTML('beforeend', partnersArr[i]);
   }
+  
   reqres.pageCount += 1;
+  
   if (reqres.pageCount === 3) {
     otherPartnersBtn.style.display = 'none';// otherPartnersBtn.removeEventListener("click", sendPartnersRequest);
   }
